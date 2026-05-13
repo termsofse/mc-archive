@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MC Archive</title>
+    <style>
+        :root {
+            --bg-color: #0d0202;
+            --accent-red: #8b0000;
+            --glass-bg: rgba(40, 5, 5, 0.3);
+            --text-main: #e0e0e0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px 20px;
+            margin: 0;
+            background: radial-gradient(circle at top, #2a0505 0%, #0d0202 70%);
+            min-height: 100vh;
+        }
+
+        h1 {
+            font-size: 3rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            color: #fff;
+            text-shadow: 0 0 20px rgba(139, 0, 0, 0.6);
+        }
+
+        .archive-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        .version-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 30px 20px;
+            text-align: center;
+            text-decoration: none;
+            color: var(--text-main);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .version-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent-red);
+            background: rgba(139, 0, 0, 0.15);
+            box-shadow: 0 0 25px rgba(139, 0, 0, 0.4);
+        }
+
+        .version-number {
+            font-size: 1.4rem;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* Responsive Fix */
+        @media (max-width: 600px) {
+            .archive-grid { grid-template-columns: 1fr 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>MC Archive</h1>
+
+    <div class="archive-grid">
+        <a href="mc-archive-1-12-2" class="version-card">
+            <span class="version-number">1.12.2</span>
+        </a>
+        <a href="mc-archive-1-9-4" class="version-card">
+            <span class="version-number">1.9.4</span>
+        </a>
+        <a href="mc-archive-1-8-8" class="version-card">
+            <span class="version-number">1.8.8</span>
+        </a>
+        <a href="mc-archive-1-5-2" class="version-card">
+            <span class="version-number">1.5.2</span>
+        </a>
+        <a href="mc-archive-1-2-5" class="version-card">
+            <span class="version-number">1.2.5</span>
+        </a>
+
+        <a href="mc-archive-beta-1-7-3" class="version-card">
+            <span class="version-number">Beta 1.7.3</span>
+        </a>
+        <a href="mc-archive-beta-1-3" class="version-card">
+            <span class="version-number">Beta 1.3</span>
+        </a>
+
+        <a href="mc-archive-alpha-1-2-6" class="version-card">
+            <span class="version-number">Alpha 1.2.6</span>
+        </a>
+        <a href="mc-archive-infdev" class="version-card">
+            <span class="version-number">Infdev</span>
+        </a>
+        <a href="mc-archive-indev" class="version-card">
+            <span class="version-number">Indev</span>
+        </a>
+    </div>
+
+</body>
+</html>
